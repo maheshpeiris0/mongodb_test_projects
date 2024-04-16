@@ -1,7 +1,10 @@
-
+import os
 from pymongo.mongo_client import MongoClient
 
-uri = "mongodb+srv://{XXX}:{PS}@cluster0.k7drlsg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+user_name=os.getenv('MONGO_DB_PS')
+password=os.getenv('MONGO_DB_USER')
+
+uri = f"mongodb+srv://{user_name}:{password}@cluster0.k7drlsg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 
 # Create a new client and connect to the server
 client = MongoClient(uri)
