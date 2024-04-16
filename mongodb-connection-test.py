@@ -1,8 +1,9 @@
 import os
 from pymongo.mongo_client import MongoClient
 
-user_name=os.getenv('MONGO_DB_PS')
-password=os.getenv('MONGO_DB_USER')
+password=os.getenv('MONGO_DB_PS')
+user_name=os.getenv('MONGO_DB_USER')
+
 
 uri = f"mongodb+srv://{user_name}:{password}@cluster0.k7drlsg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 
